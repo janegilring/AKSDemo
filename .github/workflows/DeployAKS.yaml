@@ -20,7 +20,7 @@ jobs:
         subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
         resourceGroupName: ${{ secrets.AZURE_RG }}
         template: ./AKS/ARM-template/azuredeploy.json
-        parameters: servicePrincipalClientId=${{ secrets.AKS_SP_ID }} servicePrincipalClientSecret=${{ secrets.AKS_SP_PW }} linuxAdminUsername=adminjer dnsPrefix=workshop20201125 clusterName=workshop20201125 sshRSAPublicKey=${{ secrets.SSH_PUBLIC_KEY }}
+        parameters: servicePrincipalClientId=${{ secrets.AKS_SP_ID }} servicePrincipalClientSecret=${{ secrets.AKS_SP_PW }} linuxAdminUsername=adminjer dnsPrefix=workshop20201125 clusterName=workshop20201125 sshRSAPublicKey="ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDO6LUTAueBxsoW7q3HhnkzdFJ85Phlsj2ExXt9XX/22PxBMQ+yyHlLj+IYJRGVQzcBQ22tUPEBopJxW8ZhY7VjfQdmDREqEDgy+hYsTM27Fjkk2BLW24P7HAdLqUl8KXZPrLZXgsuLPiiM7OOyQlFxk0KoSfFvGimKts3tAvu3egaBKEUXyTuHG/2r48ilneLFgKCkQSQZYxSr5uV9d9Pyk9pcbi6b8DI9+fRO7L9AfVKGYitMgwTXftrlPEa8VM6jnaS/ydoFI/KKB8Z62FJ9Jj2fxUExZ5c0b4IbAZ4DU2/LJZaWn0DlXDjmXY801ifX1XS68WkC1cAjY2jBUNc5it+hB4x+Dd6hxsm3HFDs7pxY65xO6LHYF21QWcZru8dBClXFnpeouA8aNOFp7gy8XOUpyuZgF58taISl13Tfu9Y2pHhOEcOolON+IkMd2lwIc/5TkYU5h27Rk8mDVWOWza4p2xfFwotdtcAsJINGvJ/6M/0otnoHPXKVSyP9AdCRrZrHYCXmOdLvKTiTGMGce31loEWDY9L5UIrzjnS8JIWnspWrpCxc32fXzxL9mZGUf0dixVvU3xOzNJpYJdmRZDeGAhHuXpTaH7f2HPBbtCm4s3gGZe8TkS+VX0+iotv0iM//W3uaVvb6+ueZGOxtibGyMRmakO3gIqa6/FqzUw=="
 
       # output containerName variable from template
     - run: echo ${{ steps.deploy.outputs.containerName }}
