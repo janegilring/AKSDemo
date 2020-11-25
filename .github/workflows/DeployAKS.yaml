@@ -20,7 +20,7 @@ jobs:
         subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
         resourceGroupName: ${{ secrets.AZURE_RG }}
         template: ./AKS/ARM-template/azuredeploy.json
-        parameters: servicePrincipalClientId=${{ secrets.AKS_SP_ID }} servicePrincipalClientSecret=${{ secrets.AKS_SP_PW }} sshRSAPublicKey=${{ secrets.SSH_PUBLIC_KEY }} linuxAdminUsername=adminjer dnsPrefix=workshop20201125 clusterName=workshop20201125
+        parameters: servicePrincipalClientId=${{ secrets.AKS_SP_ID }} servicePrincipalClientSecret=${{ secrets.AKS_SP_PW }} linuxAdminUsername=adminjer dnsPrefix=workshop20201125 clusterName=workshop20201125 sshRSAPublicKey=${{ secrets.SSH_PUBLIC_KEY }}
 
       # output containerName variable from template
     - run: echo ${{ steps.deploy.outputs.containerName }}
